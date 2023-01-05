@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>유효성 검사</title>
+    <link rel="stylesheet" href="global-style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="validator.js"></script>
+  </head>
+
+  <body>
+    <img
+      src="https://phoneky.co.uk/thumbs/screensavers/down/nature/animatedsn_vk9jw96f.gif"
+    />
+    <div class="login">
+      <h1>회원가입</h1>
+      <input required type="text" id="username" placeholder="아이디" />
+      <div class="success-message hide font">사용할 수 있는 아이디입니다</div>
+      <div class="failure-message hide font">
+        아이디는 네 글자 이상이어야 합니다
+      </div>
+      <input required type="password" id="password" placeholder="비밀번호" />
+      <input
+        required
+        type="password"
+        id="password-retype"
+        placeholder="비밀번호 확인"
+      />
+      <div class="mismatch-message hide font">비밀번호가 일치하지 않습니다</div>
+      <button>회원가입 완료</button>
+      <div class="required-message hide font">
+        모든 입력창을 입력하셔야 합니다
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
