@@ -6,16 +6,23 @@ const successMessage = document.querySelector(".success-message");
 const failureMessage = document.querySelector(".failure-message");
 const mismatchMessage = document.querySelector(".mismatch-message");
 const requiredMessage = document.querySelector(".required-message");
+const user = document.querySelector(".user");
+const welcome = document.querySelector(".welcome");
+const login = document.querySelector(".login");
+const splashScreen = document.querySelector(".splash-screen");
+const success = document.querySelector(".success");
 
 username.onkeyup = function(){ //이 함수는 eventhandler
 
     if(isMoreThan4Length(username.value)){
         successMessage.classList.remove("hide");
         failureMessage.classList.add("hide");
+        console.log(username.value);
     }
     else{
         failureMessage.classList.remove("hide");
         successMessage.classList.add("hide");
+        console.log(username.value);
     }
 }
 
@@ -42,6 +49,11 @@ function isMatch(password1, password2){
 button.onclick = function(){
     if(username.value !== "" && password.value !== "" && passwordRetype.value !== "" ){
         requiredMessage.classList.add("hide");
+        welcome.classList.remove("hide");
+        success.classList.remove("hide");
+        splashScreen.classList.remove("hide");
+        login.classList.add("hide");
+        user.textContent = "환영합니다, " + username.value +"님";      
     }
     else{
         requiredMessage.classList.remove("hide");}
